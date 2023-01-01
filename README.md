@@ -7,7 +7,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-#### The code is build using versions 
+#### The code is build using the following versions:
 | Provider | Terraform |
 | ------ | ------ |
 | terraform-provider-aws_v4.48.0_x5 | Terraform v1.3.6 |
@@ -15,7 +15,6 @@
 ## Requirements
 - An IAM user with programmatic access and EC2FullAccess, Route53FullAccess permissions.
 - Create a separate projects directory to keep all the necessary files.
-- Userdata scripts to run in bastion server(https://pastebin.com/UmcsJTbi), frontend server & backend server
 
 ### Userdata scripts: 
 | Plugin | README |
