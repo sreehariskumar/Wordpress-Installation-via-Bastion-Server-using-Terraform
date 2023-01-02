@@ -14,10 +14,11 @@
 
 ## Requirements
 - An IAM user with programmatic access and EC2FullAccess, Route53FullAccess permissions.
-- Create a separate projects directory to keep all the necessary files.
+- Create a separate project directory to keep all the necessary files.
+- Create a ssh key pair in your local system.
 
 ### Userdata scripts: 
-| Plugin | README |
+| Scripts | Link |
 | ------ | ------ |
 | bastion.sh | https://pastebin.com/UmcsJTbi |
 | frontend.sh | https://pastebin.com/BxBq9JXy |
@@ -28,7 +29,7 @@
 Create a terraform code to:
 - Create a VPC with 2 public subnets and 1 private subnet
 - Create an Internet Gateway & NAT Gateway
-- Import a key to AWS login to the server
+- Import a locally created SSH key to AWS login to the server
 - Create security groups with custom rules
 - Launch bastion server and frontend server in the public subnet and a backend server in private subnet
 - Create private hosted zone and a record pointing to the private ip of the backend instance
@@ -65,7 +66,6 @@ variable "secret_key" {
 
 variable "instance_ami" {
   default = "ami-0cca134ec43cf708f"
-  default = "ami-0a606d8395a538502"
 }
 
 variable "instance_type" {
@@ -73,7 +73,7 @@ variable "instance_type" {
 }
 
 locals {
-  subnets = length(data.aws_availability_zones.available_azs.names)
+  subnets = length(data.aws_availability_zones.available.names)
 }
 
 variable "vpc_cidr" {
@@ -121,6 +121,10 @@ provider "aws" {
     tags = local.common_tags
   }
 }
+```
+To initialize terraform, run the following command
+```s
+terraform init
 ```
 
 4. Now create the main.tf file qith the following configuration to build the infrastructure.
