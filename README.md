@@ -127,7 +127,7 @@ To initialize terraform, run the following command
 terraform init
 ```
 
-4. Now create the main.tf file qith the following configuration to build the infrastructure.
+4. Now create the main.tf file with the following configuration to build the infrastructure.
 #### Create a cidr block for the VPC
 
 ```s
