@@ -13,7 +13,7 @@
 | terraform-provider-aws_v4.48.0_x5 | Terraform v1.3.6 |
 
 ## Requirements
-- An IAM user with programmatic access and EC2FullAccess, Route53FullAccess permissions.
+- An IAM user with programmatic access and EC2FullAccess & Route53FullAccess permissions.
 - Create a ssh key pair in your local system.
 - Create a separate project directory to keep all the necessary files.
 
