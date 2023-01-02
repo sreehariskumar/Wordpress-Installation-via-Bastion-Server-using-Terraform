@@ -14,15 +14,15 @@
 
 ## Requirements
 - An IAM user with programmatic access and EC2FullAccess & Route53FullAccess permissions.
-- Create a ssh key pair in your local system.
+- Create a SSH key pair in your local system.
 - Create a separate project directory to keep all the necessary files.
 
 ### Userdata scripts: 
 | Script | Link |
 | ------ | ------ |
-| bastion.sh | https://pastebin.com/UmcsJTbi |
+| bastion.sh  | https://pastebin.com/UmcsJTbi |
 | frontend.sh | https://pastebin.com/BxBq9JXy |
-| backend.sh | https://pastebin.com/UCYr0tVm |
+| backend.sh  | https://pastebin.com/UCYr0tVm |
 
 ## Features
 
@@ -254,7 +254,7 @@ resource "aws_route_table_association" "private" {
 }
 ```
 
-#### Create a bastion security group to allow ssh traffic from anywhere
+#### Create a bastion security group to allow SSH traffic from anywhere
 
 ```s
 resource "aws_security_group" "bastion-sg" {
@@ -288,7 +288,7 @@ resource "aws_security_group" "bastion-sg" {
 }
 ```
 
-#### Create a frontend security group to allow ssh traffic from bastion security group and http, https traffic from anywhere
+#### Create a frontend security group to allow SSH traffic from bastion security group and HTTP, HTTPS traffic from anywhere
 
 ```s
 resource "aws_security_group" "frontend-sg" {
@@ -337,7 +337,7 @@ resource "aws_security_group" "frontend-sg" {
 }
 ```
 
-#### Create a backend security group to allow ssh traffic from bastion security group and mysql traffic from frontend security group
+#### Create a backend security group to allow SSH traffic from bastion security group and MySQL traffic from frontend security group
 
 ```s
 resource "aws_security_group" "backend-sg" {
@@ -377,7 +377,7 @@ resource "aws_security_group" "backend-sg" {
 }
 ```
 
-#### Import the locally create ssh key to AWS
+#### Import the locally create SSH key to AWS
 
 ```s
 resource "aws_key_pair" "ssh_key" {
