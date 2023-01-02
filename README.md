@@ -259,7 +259,7 @@ resource "aws_route_table_association" "private" {
 ```s
 resource "aws_security_group" "bastion-sg" {
   name_prefix = "${var.project}-${var.environment}-"
-  description = "Allow ssh from anywhere"
+  description = "Allow 22 from anywhere"
   vpc_id      = aws_vpc.vpc.id
 
   ingress {
@@ -293,7 +293,7 @@ resource "aws_security_group" "bastion-sg" {
 ```s
 resource "aws_security_group" "frontend-sg" {
   name_prefix = "${var.project}-${var.environment}-"
-  description = "Allow http from anywhere and ssh from bastion-sg"
+  description = "Allow 80, 443 from anywhere and 22 from bastion-sg"
   vpc_id      = aws_vpc.vpc.id
 
   ingress {
@@ -342,7 +342,7 @@ resource "aws_security_group" "frontend-sg" {
 ```s
 resource "aws_security_group" "backend-sg" {
   name_prefix = "${var.project}-${var.environment}-"
-  description = "Allow sql from frontend-sg and ssh from bastion-sg"
+  description = "Allow 3306 from frontend-sg and 22 from bastion-sg"
   vpc_id      = aws_vpc.vpc.id
 
   ingress {
