@@ -14,8 +14,8 @@
 
 ## Requirements
 - An IAM user with programmatic access and EC2FullAccess, Route53FullAccess permissions.
-- Create a separate project directory to keep all the necessary files.
 - Create a ssh key pair in your local system.
+- Create a separate project directory to keep all the necessary files.
 
 ### Userdata scripts: 
 | Script | Link |
