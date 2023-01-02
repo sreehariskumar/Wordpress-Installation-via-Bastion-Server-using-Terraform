@@ -18,7 +18,7 @@
 - Create a ssh key pair in your local system.
 
 ### Userdata scripts: 
-| Scripts | Link |
+| Script | Link |
 | ------ | ------ |
 | bastion.sh | https://pastebin.com/UmcsJTbi |
 | frontend.sh | https://pastebin.com/BxBq9JXy |
