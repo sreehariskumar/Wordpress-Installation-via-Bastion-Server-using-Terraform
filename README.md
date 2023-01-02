@@ -200,6 +200,7 @@ resource "aws_nat_gateway" "nat_gw" {
   tags = {
     Name = "${var.project}-${var.environment}"
   }
+   depends_on = [aws_internet_gateway.igw]
 }
 ```
 #### Create a public route table to route traffic via internet gateway.
