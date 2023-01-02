@@ -7,7 +7,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-#### The code is build using the following versions:
+#### The code is built using the following versions:
 | Provider | Terraform |
 | ------ | ------ |
 | terraform-provider-aws_v4.48.0_x5 | Terraform v1.3.6 |
