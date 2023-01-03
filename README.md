@@ -50,7 +50,7 @@ This project is developed to demonstrate how to automate the installation of Wor
 2. **Frontend-server Security Group** : The frontend-server security groups allows SSH traffic only from Bastion server and HTTP & HTTPS traffic from internet.
 3. **Backend-server Security Group** - This security groups allows inbound SSH connection only from Bastion server security group and MySQL connection from Frontend-server security group.
 
-**AWS Keypair** - All SSH access are key-based. A key-pair is generated locally and the public key is uploaded into the AWS using terraform.
+**AWS Keypair** - All SSH access are key-based. A ssh key-pair is generated locally and the public key is uploaded into the AWS using terraform.
 
 **AWS Route53** - This project use both Public & Private Hosted Zone to create DNS records for Backend server and Frontend server
 
