@@ -251,7 +251,7 @@ resource "aws_instance" "backend" {
   tags = {
     Name = "${var.project}-${var.environment}-backend"
   }
-  depends_on = [aws_nat_gateway.nat_gw]
+  depends_on = [aws_nat_gateway.nat-gw]
 }
 
 resource "aws_route53_zone" "private" {
