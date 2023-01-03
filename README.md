@@ -28,9 +28,6 @@ Create a terraform code to:
 - Create private hosted zone and a record pointing to the private ip of the backend instance
 - Create a record in a public hosted zone pointing to the public ip of the frontend instance to access the wordpress website
 
-##Project Description
-This project is developed to demonstrate how to automate the installattion of WordPress application in AWS using Terraform. The frontend of the website is hosted on an independant EC2 instance and the backend is managed using a second EC2 instance. Access to the backend will be restricted as this is created within a private subnet. Public SSH access into both these instances are only be possible though a third Ec2 instance called a Bastion server. Frontend server is capable of accepting HTTP & HTTPS connections.
-
 ## Project Description
 This project is developed to demonstrate how to automate the installation of WordPress application in AWS using Terraform. The frontend of the website is hosted on an independant EC2 instance and the backend is managed using a second EC2 instance. Access to the backend will be restricted as this is created within a private subnet. Public SSH access into both these instances are only be possible though a third EC2 instance called a Bastion server. Frontend server is capable of accepting HTTP & HTTPS connections.
 
