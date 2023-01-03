@@ -7,5 +7,5 @@ output "subnet_count" {
 }
 
 output "WordPress-URL" {
-  value = "http://${aws_route53_record.public-dns.fqdn}"
+  value = "http://wordpress.${var.public_domain}"
 }
