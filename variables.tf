@@ -32,7 +32,7 @@ variable "instance_type" {
 }
 
 locals {
-  subnets = length(data.aws_availability_zones.available.names)
+  subnet_count = length(data.aws_availability_zones.available.names)
 }
 
 variable "vpc_cidr" {
